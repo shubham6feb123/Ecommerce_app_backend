@@ -1,0 +1,26 @@
+.alert__container{
+    display: flex;
+    position: fixed;
+    bottom: 30px;
+    max-width: fit-content;
+    align-items: center;
+    left: 42vw;
+    min-width: fit-content;
+    /* left: 50%; */
+    margin: auto;
+    padding: 16px;
+    background: #212121;
+    border-radius: 2px;
+    transform: translateY(100rem);
+    transition: transform 1.5s ease-in-out;
+}
+
+.clicked{
+    transform: translateY(0rem);
+    transition: all 2s 1s ease-in-out;
+}
+
+.remove{
+    transform: translateY(100rem);
+    transition: transform 1.5s 5s ease-in-out;
+}
