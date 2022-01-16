@@ -30,6 +30,13 @@ fs.readdirSync('./routes').map(r=>{app.use('/api',require("./routes/"+r))});
 
 if(process.env.NODE_ENV==="Production"){
    app.use(express.static(path.join(__dirname,'/Ecommerce-project-master/build')))
+   app.get('*',(req,res)=>{
+     res.sendFile(path.join(__dirname,'Ecommerce-project-master','build','index.html'))
+   })
+}else{
+    app.get("/",(req,res)=>{
+        res.send("Api Running")
+    })
 }
 
 app.listen(PORT,()=>{
