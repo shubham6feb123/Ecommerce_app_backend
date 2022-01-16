@@ -5,6 +5,7 @@ require('dotenv').config();
 const PORT = process.env.PORT || 8080;
 const fs = require('fs')
 const CORS = require('cors');
+const path = require("path")
 
 //connecting server to database
 mongoose.connect(process.env.DATABASE,{
@@ -28,7 +29,7 @@ app.use(CORS());
 fs.readdirSync('./routes').map(r=>{app.use('/api',require("./routes/"+r))});
 
 if(process.env.NODE_ENV==="Production"){
-   app.use("Ecommerce-project-master/build")
+   app.use(express.static(path.join(__dirname,'/Ecommerce-project-master/build')))
 }
 
 app.listen(PORT,()=>{
