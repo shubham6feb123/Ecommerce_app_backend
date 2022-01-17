@@ -2,7 +2,7 @@ import axios from "axios"
 
 export const currentUser = async (email) => {
   return await axios.post(
-    `http://localhost:8080/api/current-user`,
+    `${process.env.REACT_APP_API}/current-user`,
     {},
     {
       headers: {
@@ -14,7 +14,7 @@ export const currentUser = async (email) => {
 
 export const currentAdmin = async (email) => {
   return await axios.post(
-    `http://localhost:8080/api/current-admin`,
+    `${process.env.REACT_APP_API}/current-admin`,
     {},
     {
       headers: {
