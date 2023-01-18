@@ -9,12 +9,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "heroku-postbuild":"YARN_CONFIG_PRODUCTION=false npm install --prefix Ecommerce-project-master && npm run build --prefix Ecommerce-project-master"
+    "heroku-postbuild": "YARN_CONFIG_PRODUCTION=false npm install --prefix Ecommerce-project-master && npm run build --prefix Ecommerce-project-master"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cjs-loader": "^0.1.0",
     "cloudinary": "^1.26.2",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
